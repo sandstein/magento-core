@@ -4,24 +4,6 @@
     "type": "magento-core",
     "description": "Magento Core",
     "homepage": "http://www.magentocommerce.com",
-    "autoload": {
-        "psr-0": {
-            "": [
-                "app/code/local",
-                "app/code/community",
-                "app/code/core",
-                "lib"
-            ]
-        },
-        "classmap": [
-            "app/Mage.php",
-            "lib/3Dsecure",
-            "lib/phpseclib"
-        ],
-        "files": [
-            "app/code/core/Mage/Core/functions.php"
-        ]
-    },
     "require": {},
     "extra": {
         "map": [
