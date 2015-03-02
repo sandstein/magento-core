@@ -22,3 +22,8 @@ patching file app/code/core/Mage/Payment/Model/Method/Cc.php
 patching file js/prototype/validation.js
 
 
+-e -n 2015-03-02 18:19:28 UTC | SUPEE-1533 | EE_1.12 | v1 | _ | n/a | SUPEE-1533_EE_1.12_v1.patch
+patching file app/code/core/Mage/Adminhtml/Block/Dashboard/Graph.php
+patching file app/code/core/Mage/Adminhtml/controllers/DashboardController.php
+
+
