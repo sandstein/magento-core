@@ -86,6 +86,10 @@
             [
                 "mage",
                 "mage"
+            ],
+            [
+                "LICENSE.html",
+                "LICENSE.html"
             ]
         ]
     }
