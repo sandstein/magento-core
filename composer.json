@@ -12,6 +12,10 @@
                 "app"
             ],
             [
+                "dev",
+                "dev"
+            ],
+            [
                 "downloader",
                 "downloader"
             ],
