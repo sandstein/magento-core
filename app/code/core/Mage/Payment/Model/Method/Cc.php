@@ -140,15 +140,12 @@ class Mage_Payment_Model_Method_Cc extends Mage_Payment_Model_Method_Abstract
                     . '|(^(49118)[0-2](\d{10}$|\d{12,13}$))|(^(4936)(\d{12}$|\d{14,15}$))/'
                 );
 
-                foreach ($ccTypeRegExpList as $ccTypeMatch=>$ccTypeRegExp) {
-                    if (preg_match($ccTypeRegExp, $ccNumber)) {
-                        $ccType = $ccTypeMatch;
-                        break;
+                $specifiedCCType = $info->getCcType();
+                if (array_key_exists($specifiedCCType, $ccTypeRegExpList)) {
+                    $ccTypeRegExp = $ccTypeRegExpList[$specifiedCCType];
+                    if (!preg_match($ccTypeRegExp, $ccNumber)) {
+                        $errorMsg = Mage::helper('payment')->__('Credit card number mismatch with credit card type.');
                     }
-                }
-
-                if (!$this->OtherCcType($info->getCcType()) && $ccType!=$info->getCcType()) {
-                    $errorMsg = Mage::helper('payment')->__('Credit card number mismatch with credit card type.');
                 }
             }
             else {
