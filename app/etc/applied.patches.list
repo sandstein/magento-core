@@ -275,3 +275,7 @@ patching file lib/Varien/File/Uploader.php
 patching file lib/Varien/Io/File.php
 
 
+2016-02-01 10:28:51 UTC | SUPEE-7616 | CE_1.7.0.2-CE_1.4.2.0 | v1 | a16c51e3679c3f19de6c3207b7a42daa7f9227fc | Fri Dec 18 12:42:03 2015 +0200 | 3617437b6da11be812fcca85f4e6ecbd8b8dc94c..a16c51e3679c3f19de6c3207b7a42daa7f9227fc
+patching file app/code/core/Mage/Usa/Model/Shipping/Carrier/Usps.php
+
+
