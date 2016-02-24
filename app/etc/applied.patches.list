@@ -279,3 +279,10 @@ patching file lib/Varien/Io/File.php
 patching file app/code/core/Mage/Usa/Model/Shipping/Carrier/Usps.php
 
 
+-e -n 2016-02-24 07:20:41 UTC | SUPEE-7405 | CE_1.7.0.2 | v1.1 | a4eeba90a6af9c513d8f098e2fab5cc52977e771 | Fri Feb 5 13:25:34 2016 +0200 | cf09a622d30efae9499273206790f4ca27675593..a4eeba90a6af9c513d8f098e2fab5cc52977e771
+patching file app/code/core/Mage/Adminhtml/Helper/Sales.php
+patching file app/code/core/Mage/Core/Model/Config.php
+patching file app/code/core/Mage/Sales/Model/Quote/Item.php
+patching file lib/Varien/File/Uploader.php
+
+
