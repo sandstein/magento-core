@@ -1,4 +1,4 @@
-2016-10-14 11:01:54 UTC | SUPEE-8788 | CE_1.9.2.4 | v1 | d6902b2b23c57146ef043363141b60ac3aa0d8f1 | Thu Sep 8 13:35:15 2016 +0300 | 559ed2ac1b..d6902b2b23
+2016-10-17 06:57:40 UTC | SUPEE-8788 | CE_1.9.2.4 | v2 | c1feffaccfb9f810d8644413b13754ce83ff0e73 | Mon Sep 26 13:40:23 2016 +0300 | 559ed2ac1b..c1feffaccf
 patching file app/code/core/Mage/Adminhtml/Block/Catalog/Product/Helper/Form/Gallery/Content.php
 patching file app/code/core/Mage/Adminhtml/Block/Cms/Wysiwyg/Images/Content/Uploader.php
 patching file app/code/core/Mage/Adminhtml/Block/Media/Uploader.php
@@ -73,6 +73,10 @@ patching file js/lib/uploader/fusty-flow-factory.js
 patching file js/lib/uploader/fusty-flow.js
 patching file js/mage/adminhtml/product.js
 patching file js/mage/adminhtml/uploader/instance.js
+patching file lib/Unserialize/Parser.php
+patching file lib/Unserialize/Reader/Arr.php
+patching file lib/Unserialize/Reader/ArrValue.php
+patching file lib/Unserialize/Reader/Null.php
 patching file skin/adminhtml/default/default/boxes.css
 patching file skin/adminhtml/default/default/media/flex.swf
 patching file skin/adminhtml/default/default/media/uploader.swf
