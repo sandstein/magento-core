@@ -234,6 +234,8 @@ class Varien_Filter_Template implements Zend_Filter_Interface
         $stackVars = $tokenizer->tokenize();
         $result = $default;
         $last = 0;
+        /** @var $emailPathValidator Mage_Adminhtml_Model_Email_PathValidator */
+        $emailPathValidator = $this->getEmailPathValidator();
         for($i = 0; $i < count($stackVars); $i ++) {
             if ($i == 0 && isset($this->_templateVars[$stackVars[$i]['name']])) {
                 // Getting of template value
@@ -252,10 +254,16 @@ class Varien_Filter_Template implements Zend_Filter_Interface
                     }
                 } else if ($stackVars[$i]['type'] == 'method') {
                     // Calling of object method
-                    if (is_callable(array($stackVars[$i-1]['variable'], $stackVars[$i]['name'])) || substr($stackVars[$i]['name'],0,3) == 'get') {
-                        $stackVars[$i]['variable'] = call_user_func_array(array($stackVars[$i-1]['variable'],
-                                                                                $stackVars[$i]['name']),
-                                                                          $stackVars[$i]['args']);
+                    if (is_callable(array($stackVars[$i-1]['variable'], $stackVars[$i]['name'])) || substr($stackVars[$i]['name'],0,3) == 'get')
+                    {
+                        $isEncrypted = false;
+                        if ($stackVars[$i]['name'] == 'getConfig') {
+                            $isEncrypted = $emailPathValidator->isValid($stackVars[$i]['args']);
+                        }
+                        $stackVars[$i]['variable'] = call_user_func_array(
+                            array($stackVars[$i-1]['variable'], $stackVars[$i]['name']),
+                            !$isEncrypted ? $stackVars[$i]['args'] : array(null)
+                        );
                     }
                 }
                 $last = $i;
@@ -268,5 +276,15 @@ class Varien_Filter_Template implements Zend_Filter_Interface
         }
         Varien_Profiler::stop("email_template_proccessing_variables");
         return $result;
+    }
+
+    /**
+     * Retrieve model object
+     *
+     * @return Mage_Core_Model_Abstract
+     */
+    protected function getEmailPathValidator()
+    {
+        return Mage::getModel('adminhtml/email_pathValidator');
     }
 }

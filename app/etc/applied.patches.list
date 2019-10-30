@@ -754,3 +754,59 @@ patching file app/code/core/Mage/Authorizenet/etc/config.xml
 patching file app/code/core/Mage/Authorizenet/etc/system.xml
 
 
+2019-10-30 13:17:01 UTC | SUPEE-11086 | CE_1.7.0.2 | v1 | 1107d66d634ca4dc8086298a9bb4dbd9197c32e5 | Fri Mar 22 18:40:27 2019 +0000 | 25ef90c0dc24dd62d56e84e231571a66054556a6..HEAD
+patching file app/Mage.php
+patching file app/code/core/Mage/Admin/Model/Session.php
+patching file app/code/core/Mage/Adminhtml/Block/Api/Buttons.php
+patching file app/code/core/Mage/Adminhtml/Block/Catalog/Product/Edit.php
+patching file app/code/core/Mage/Adminhtml/Block/Customer/Group/Edit.php
+patching file app/code/core/Mage/Adminhtml/Block/Permissions/Buttons.php
+patching file app/code/core/Mage/Adminhtml/Block/System/Design/Edit.php
+patching file app/code/core/Mage/Adminhtml/Block/System/Store/Edit.php
+patching file app/code/core/Mage/Adminhtml/Controller/Action.php
+patching file app/code/core/Mage/Adminhtml/Helper/Data.php
+patching file app/code/core/Mage/Adminhtml/Model/Email/PathValidator.php
+patching file app/code/core/Mage/Adminhtml/Model/LayoutUpdate/Validator.php
+patching file app/code/core/Mage/Adminhtml/Model/System/Config/Backend/Gatewayurl.php
+patching file app/code/core/Mage/Adminhtml/Model/System/Config/Backend/Protected.php
+patching file app/code/core/Mage/Adminhtml/controllers/Api/RoleController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Api/UserController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Catalog/Product/Action/AttributeController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Catalog/Product/AttributeController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Catalog/Product/WidgetController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Catalog/ProductController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Cms/WysiwygController.php
+patching file app/code/core/Mage/Adminhtml/controllers/CustomerController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Permissions/RoleController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Permissions/UserController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Promo/CatalogController.php
+patching file app/code/core/Mage/Adminhtml/controllers/Promo/QuoteController.php
+patching file app/code/core/Mage/Adminhtml/controllers/System/BackupController.php
+patching file app/code/core/Mage/Adminhtml/controllers/System/DesignController.php
+patching file app/code/core/Mage/Api2/Block/Adminhtml/Roles/Buttons.php
+patching file app/code/core/Mage/Api2/controllers/Adminhtml/Api2/AttributeController.php
+patching file app/code/core/Mage/Api2/controllers/Adminhtml/Api2/RoleController.php
+patching file app/code/core/Mage/Catalog/Model/Product/Option/Type/Select.php
+patching file app/code/core/Mage/Cms/Helper/Data.php
+patching file app/code/core/Mage/Cms/etc/config.xml
+patching file app/code/core/Mage/Core/Block/Abstract.php
+patching file app/code/core/Mage/Core/Helper/Abstract.php
+patching file app/code/core/Mage/Core/Model/File/Validator/StreamWrapper.php
+patching file app/code/core/Mage/Core/Model/Input/Filter/MaliciousCode.php
+patching file app/code/core/Mage/Core/etc/system.xml
+Hunk #1 succeeded at 757 (offset -21 lines).
+patching file app/code/core/Mage/Eav/Model/Attribute/Data/File.php
+patching file app/code/core/Mage/Eav/Model/Entity/Attribute/Abstract.php
+patching file app/code/core/Mage/Oauth/controllers/Adminhtml/Oauth/ConsumerController.php
+patching file app/code/core/Mage/Rss/etc/system.xml
+patching file app/code/core/Mage/Usa/etc/system.xml
+patching file app/code/core/Mage/Widget/controllers/Adminhtml/Widget/InstanceController.php
+patching file app/etc/config.xml
+patching file app/locale/en_US/Mage_Adminhtml.csv
+patching file app/locale/en_US/Mage_Core.csv
+patching file app/locale/en_US/Mage_Rss.csv
+patching file app/locale/en_US/Mage_Widget.csv
+patching file lib/Varien/Db/Adapter/Pdo/Mysql.php
+patching file lib/Varien/Filter/Template.php
+
+
