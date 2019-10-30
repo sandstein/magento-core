@@ -105,4 +105,19 @@ class Mage_Core_Model_Observer
         Mage::app()->getCache()->clean(Zend_Cache::CLEANING_MODE_OLD);
         Mage::dispatchEvent('core_clean_cache');
     }
+
+    /**
+     * Checks method availability for processing in variable
+     *
+     * @param Varien_Event_Observer $observer
+     * @throws Exception
+     * @return Mage_Core_Model_Observer
+     */
+    public function secureVarProcessing(Varien_Event_Observer $observer)
+    {
+        if (Mage::registry('varProcessing')) {
+            Mage::throwException(Mage::helper('core')->__('Disallowed template variable method.'));
+        }
+        return $this;
+    }
 }

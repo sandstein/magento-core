@@ -434,7 +434,7 @@
 			html += '<select id="media_type" name="media_type" onchange="Media.formToData(\'type\');">';
 			html += option("video");
 			html += option("audio");
-			html += option("flash");
+			html += editor.getParam("media_disable_flash") ? '' : option("flash");
 			html += option("quicktime");
 			html += option("shockwave");
 			html += option("windowsmedia");
