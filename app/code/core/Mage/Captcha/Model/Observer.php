@@ -289,4 +289,29 @@ class Mage_Captcha_Model_Observer
         $captchaParams = $request->getPost(Mage_Captcha_Helper_Data::INPUT_NAME_FIELD_VALUE);
         return $captchaParams[$formId];
     }
+
+    /**
+     * Check Captcha On Share Wishlist Page
+     *
+     * @param Varien_Event_Observer $observer
+     * @return Mage_Captcha_Model_Observer
+     */
+    public function checkWishlistSharing($observer)
+    {
+        $formId = 'wishlist_sharing';
+        $captchaModel = Mage::helper('captcha')->getCaptcha($formId);
+        if ($captchaModel->isRequired()) {
+            $controller = $observer->getControllerAction();
+            $request = $controller->getRequest();
+            if (!$captchaModel->isCorrect($this->_getCaptchaString($request, $formId))) {
+                Mage::getSingleton('wishlist/session')->addError(Mage::helper('captcha')->__('Incorrect CAPTCHA.'));
+                $controller->setFlag('', Mage_Core_Controller_Varien_Action::FLAG_NO_DISPATCH, true);
+                Mage::getSingleton('wishlist/session')->setSharingForm($request->getPost());
+                $wishlistId = (int)$request->getParam('wishlist_id');
+                $controller->getResponse()
+                    ->setRedirect(Mage::getUrl('wishlist/index/share/wishlist_id/' . $wishlistId));
+            }
+        }
+        return $this;
+    }
 }
