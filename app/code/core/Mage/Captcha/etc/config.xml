@@ -78,6 +78,14 @@
                     </captcha>
                 </observers>
             </controller_action_predispatch_customer_account_createpost>
+            <controller_action_predispatch_wishlist_index_send>
+                <observers>
+                    <captcha>
+                        <class>captcha/observer</class>
+                        <method>checkWishlistSharing</method>
+                    </captcha>
+                </observers>
+            </controller_action_predispatch_wishlist_index_send>
             <controller_action_predispatch_adminhtml_index_forgotpassword>
                 <observers>
                     <captcha>
@@ -206,6 +214,7 @@
                     <user_forgotpassword>1</user_forgotpassword>
                     <guest_checkout>1</guest_checkout>
                     <register_during_checkout>1</register_during_checkout>
+                    <wishlist_sharing>1</wishlist_sharing>
                 </always_for>
             </captcha>
         </customer>
@@ -233,6 +242,9 @@
                     <register_during_checkout>
                         <label>Register during Checkout</label>
                     </register_during_checkout>
+                    <wishlist_sharing>
+                        <label>Share Wishlist</label>
+                    </wishlist_sharing>
                 </areas>
             </frontend>
             <backend>

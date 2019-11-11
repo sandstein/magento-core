@@ -190,6 +190,9 @@ class Mage_Captcha_Model_Zend extends Zend_Captcha_Image implements Mage_Captcha
      */
     protected function _isUserAuth()
     {
+        if ($this->_formId == 'wishlist_sharing') {
+            return false;
+        }
         return Mage::app()->getStore()->isAdmin()
             ? Mage::getSingleton('admin/session')->isLoggedIn()
             : Mage::getSingleton('customer/session')->isLoggedIn();
