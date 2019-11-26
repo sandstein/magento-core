@@ -24,29 +24,27 @@
  * @license http://www.magento.com/license/enterprise-edition
  */
 
-class Varien_Filter_FormElementName extends Zend_Filter_Alnum
+/**
+ * Password length config field backend model
+ *
+ * @category    Mage
+ * @package     Mage_Adminhtml
+ * @author      Magento Core Team <core@magentocommerce.com>
+ */
+class Mage_Adminhtml_Model_System_Config_Backend_Passwordlength extends  Mage_Core_Model_Config_Data
 {
     /**
-     * Defined by Zend_Filter_Interface
+     * Before save processing
      *
-     * Returns the string $value, removing all but alphabetic (including -_;) and digit characters
-     *
-     * @param  string $value
-     * @return string
+     * @throws Mage_Core_Exception
+     * @return Mage_Adminhtml_Model_System_Config_Backend_Passwordlength
      */
-    public function filter($value)
+    protected function _beforeSave()
     {
-        $whiteSpace = $this->allowWhiteSpace ? '\s' : '';
-        if (!self::$_unicodeEnabled) {
-            // POSIX named classes are not supported, use alternative a-zA-Z0-9 match
-            $pattern = '/[^a-zA-Z0-9\[\];_\-' . $whiteSpace . ']/';
-        } else if (self::$_meansEnglishAlphabet) {
-            //The Alphabet means english alphabet.
-            $pattern = '/[^a-zA-Z0-9\[\];_\-'  . $whiteSpace . ']/u';
-        } else {
-            //The Alphabet means each language's alphabet.
-            $pattern = '/[^\p{L}\p{N}\[\];_\-' . $whiteSpace . ']/u';
+        if ((int)$this->getValue() < Mage_Core_Model_App::ABSOLUTE_MIN_PASSWORD_LENGTH) {
+            Mage::throwException(Mage::helper('adminhtml')
+                ->__('Password must be at least of %d characters.', Mage_Core_Model_App::ABSOLUTE_MIN_PASSWORD_LENGTH));
         }
-        return preg_replace($pattern, '', (string) $value);
+        return $this;
     }
 }
