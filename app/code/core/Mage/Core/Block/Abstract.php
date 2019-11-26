@@ -1303,6 +1303,16 @@ abstract class Mage_Core_Block_Abstract extends Varien_Object
     }
 
     /**
+     * Retrieve Session Form Key
+     *
+     * @return string
+     */
+    public function getFormKey()
+    {
+        return Mage::getSingleton('core/session')->getFormKey();
+    }
+
+    /**
      * Load block html from cache storage
      *
      * @return string | false
@@ -1363,5 +1373,15 @@ abstract class Mage_Core_Block_Abstract extends Varien_Object
         }
 
         return '<!--SID=' . $cacheKey . '-->';
+    }
+
+    /**
+     * Checks is request Url is secure
+     *
+     * @return bool
+     */
+    protected function _isSecure()
+    {
+        return Mage::app()->getFrontController()->getRequest()->isSecure();
     }
 }
