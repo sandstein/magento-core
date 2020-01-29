@@ -73,11 +73,6 @@ class Mage_Adminhtml_Model_LayoutUpdate_Validator extends Zend_Validate_Abstract
      * @var array
      */
     protected $_protectedExpressions = array();
-    
-    /**
-     * @var Mage_Core_Model_Layout_Validator|null
-     */
-    protected $_validator = null;
 
     /**
      * Construct
