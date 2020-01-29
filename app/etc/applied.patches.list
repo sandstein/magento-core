@@ -989,3 +989,13 @@ patching file lib/Varien/Filter/FormElementName.php
 patching file skin/adminhtml/default/default/boxes.css
 
 
+2020-01-29 08:27:44 UTC | SUPEE-11295_CE_1702 | CE_1.7.0.2 | v1 | dbd5d1bcc08b561ec90df2f875772819187ab0bc | Fri Jan 17 20:03:45 2020 +0000 | b109bbf2003ba792e808538c928beda2f6efd744..HEAD
+patching file app/code/core/Mage/Adminhtml/Block/Catalog/Product/Helper/Form/Gallery/Content.php
+patching file app/code/core/Mage/Adminhtml/Block/Cms/Wysiwyg/Images/Content/Uploader.php
+patching file app/code/core/Mage/Core/Model/Input/Filter/MaliciousCode.php
+patching file app/design/adminhtml/default/default/template/forgotpassword.phtml
+patching file app/design/adminhtml/default/default/template/login.phtml
+patching file app/design/adminhtml/default/default/template/page/head.phtml
+patching file app/design/adminhtml/default/default/template/resetforgottenpassword.phtml
+
+
