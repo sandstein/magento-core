@@ -999,3 +999,50 @@ patching file app/design/adminhtml/default/default/template/page/head.phtml
 patching file app/design/adminhtml/default/default/template/resetforgottenpassword.phtml
 
 
+-e -n 2020-04-30 07:27:54 UTC | SUPEE-11314_CE_1702 | CE_1.7.0.2 | v1 | 2d11cf768b330626893c641d7c085df749b703f4 | Fri Apr 10 09:04:06 2020 +0000 | dbd5d1bcc08b561ec90df2f875772819187ab0bc..HEAD
+patching file app/code/core/Mage/Admin/Model/Observer.php
+patching file app/code/core/Mage/Admin/Model/Session.php
+patching file app/code/core/Mage/Admin/Model/User.php
+patching file app/code/core/Mage/Admin/etc/config.xml
+patching file app/code/core/Mage/Api/Model/User.php
+patching file app/code/core/Mage/Api2/Model/Observer.php
+patching file app/code/core/Mage/Api2/etc/config.xml
+patching file app/code/core/Mage/Core/Model/Encryption.php
+patching file app/code/core/Mage/Core/etc/config.xml
+patching file app/code/core/Mage/Customer/Model/Customer.php
+patching file app/code/core/Mage/Customer/Model/Observer.php
+patching file app/code/core/Mage/Customer/etc/config.xml
+patching file app/code/core/Mage/Dataflow/Model/Profile.php
+patching file app/design/frontend/base/default/template/catalog/product/compare/list.phtml
+patching file app/design/frontend/base/default/template/catalog/product/list.phtml
+patching file app/design/frontend/base/default/template/catalog/product/list/related.phtml
+patching file app/design/frontend/base/default/template/catalog/product/view.phtml
+patching file app/design/frontend/base/default/template/catalog/product/view/addto.phtml
+patching file app/design/frontend/base/default/template/catalog/product/widget/new/content/new_grid.phtml
+patching file app/design/frontend/base/default/template/catalog/product/widget/new/content/new_list.phtml
+patching file app/design/frontend/base/default/template/checkout/cart/crosssell.phtml
+patching file app/design/frontend/base/default/template/checkout/cart/item/default.phtml
+patching file app/design/frontend/base/default/template/checkout/cart/shipping.phtml
+patching file app/design/frontend/base/default/template/checkout/cart/sidebar/default.phtml
+patching file app/design/frontend/base/default/template/checkout/onepage/billing.phtml
+patching file app/design/frontend/base/default/template/checkout/onepage/review/info.phtml
+patching file app/design/frontend/base/default/template/customer/form/changepassword.phtml
+patching file app/design/frontend/base/default/template/customer/form/edit.phtml
+patching file app/design/frontend/base/default/template/customer/form/register.phtml
+patching file app/design/frontend/base/default/template/customer/form/resetforgottenpassword.phtml
+patching file app/design/frontend/base/default/template/downloadable/checkout/cart/item/default.phtml
+patching file app/design/frontend/base/default/template/persistent/checkout/onepage/billing.phtml
+patching file app/design/frontend/base/default/template/persistent/customer/form/login.phtml
+patching file app/design/frontend/base/default/template/persistent/customer/form/register.phtml
+patching file app/design/frontend/base/default/template/reports/widget/compared/content/compared_grid.phtml
+patching file app/design/frontend/base/default/template/reports/widget/compared/content/compared_list.phtml
+patching file app/design/frontend/base/default/template/reports/widget/viewed/content/viewed_grid.phtml
+patching file app/design/frontend/base/default/template/reports/widget/viewed/content/viewed_list.phtml
+patching file app/design/frontend/base/default/template/wishlist/item/column/cart.phtml
+patching file app/design/frontend/base/default/template/wishlist/shared.phtml
+patching file app/design/frontend/base/default/template/wishlist/sidebar.phtml
+patching file js/lib/jquery/jquery-1.12.1.js
+patching file js/lib/jquery/jquery-1.12.1.min.js
+patching file js/lib/jquery/jquery-1.12.1.min.map
+
+
