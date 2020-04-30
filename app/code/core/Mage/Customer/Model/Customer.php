@@ -386,7 +386,7 @@ class Mage_Customer_Model_Customer extends Mage_Core_Model_Abstract
      */
     public function hashPassword($password, $salt = null)
     {
-        return Mage::helper('core')->getHash(trim($password), (bool) $salt ? $salt : Mage_Admin_Model_User::HASH_SALT_LENGTH);
+        return Mage::helper('core')->getHashPassword(trim($password), (bool) $salt ? $salt : Mage_Admin_Model_User::HASH_SALT_LENGTH);
     }
 
     /**
