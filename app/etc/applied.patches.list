@@ -999,7 +999,7 @@ patching file app/design/adminhtml/default/default/template/page/head.phtml
 patching file app/design/adminhtml/default/default/template/resetforgottenpassword.phtml
 
 
--e -n 2020-04-30 07:27:54 UTC | SUPEE-11314_CE_1702 | CE_1.7.0.2 | v1 | 2d11cf768b330626893c641d7c085df749b703f4 | Fri Apr 10 09:04:06 2020 +0000 | dbd5d1bcc08b561ec90df2f875772819187ab0bc..HEAD
+2020-05-26 09:16:05 UTC | SUPEE-11314_CE_1702 | CE_1.7.0.2 | v1 | feb7938277c4608f2d9705e6e6895b9eee3ac529 | Tue May 5 19:28:53 2020 +0000 | dbd5d1bcc08b561ec90df2f875772819187ab0bc..HEAD
 patching file app/code/core/Mage/Admin/Model/Observer.php
 patching file app/code/core/Mage/Admin/Model/Session.php
 patching file app/code/core/Mage/Admin/Model/User.php
